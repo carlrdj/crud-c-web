@@ -1,0 +1,167 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container bg-dark text-white pt-2 pb-2">
+        <h1>Usuarios</h1>
+    </div>
+    <div class="container pt-2">
+        <button class="btn btn-success m-3 btn-lg" onclick="addUser()">
+            Agregar
+        </button>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Estado</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="listUsers"></tbody>
+        </table>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="ModalFormUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="formUser">
+                        <input type="hidden" class="form-control" id="use_id" name="use_id">
+                        <div class="form-group">
+                            <label for="use_name">Nombres</label>
+                            <input type="text" class="form-control" id="use_name" name="use_name" placeholder="Nombres" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="use_email">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="use_email" name="use_email" placeholder="name@example.com">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" form="formUser">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script>
+        $().ready(function () {
+            showListUsers();
+            $("#formUser").submit(function (e) {
+                saveUser();
+                return false;
+            });
+        })
+
+        function showListUsers() {
+            $.ajax({
+                url: '/home/GetListUsers',
+                type: 'get',
+                datatype: 'json',
+                success: function (res) {
+                    var html = '';
+                    for (var i = 0; i < res['data'].length; i++) {
+                        html += "<tr>"
+                            + "<td>" + res['data'][i]['use_name_uppercase'] + "</td>"
+                            + "<td>" + res['data'][i]['use_email'] + "</td>"
+                            + "<td>" + res['data'][i]['use_name'] + "</td>"
+                            + "<td><button class='btn btn-warning' onclick='editUser(" + res['data'][i]['use_id'] + ")'>Editar</td>"
+                            + "<td><button class='btn btn-danger' onclick='removeUser(" + res['data'][i]['use_id'] + ")'>Eliminar</td>"
+                            + "</tr>";
+                    }
+                    $('#listUsers').html(html);
+                }
+            });
+        }
+
+        function addUser() {
+            $('#use_id').val('');
+            $('#use_name').val('');
+            $('#use_email').val('');
+            openModalFormUser();
+        }
+
+        function editUser(id) {
+            $.ajax({
+                url: '/home/GetUserById/' + id,
+                type: 'get',
+                datatype: 'json',
+                success: function (res) {
+                    $('#use_id').val(res['data']['use_id']);
+                    $('#use_name').val(res['data']['use_name']);
+                    $('#use_email').val(res['data']['use_email']);
+                    openModalFormUser();
+                }
+            });
+        }
+
+        function removeUser(id) {
+            $.ajax({
+                url: '/home/DeleteUser',
+                type: 'post',
+                data: {
+                    id: id
+                },
+                success: function (res) {
+                    console.log(res)
+                    showListUsers();
+                }
+            });   
+        }
+
+        function saveUser() {            
+            if ($('#use_id').val() > 0) {
+                $.ajax({
+                    url: '/home/UpdateUser',
+                    type: 'post',
+                    data: $('#formUser').serialize(),
+                    success: function (res) {
+                        console.log(res);
+                        showListUsers();
+                        closeModalFormUser();
+                    }
+                });
+            } else {
+                $.ajax({
+                    url: '/home/InsertUser',
+                    type: 'post',
+                    data: $('#formUser').serialize(),
+                    success: function (res) {
+                        console.log(res);
+                        showListUsers();
+                        closeModalFormUser();
+                    }
+                });
+            }
+        }
+
+        function openModalFormUser() {
+            $('#ModalFormUser').modal('show');
+        }
+        function closeModalFormUser() {
+            $('#ModalFormUser').modal('hide');
+        }
+    </script>
+</body>
+</html>

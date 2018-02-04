@@ -1,0 +1,29 @@
+C:\Users\SEVEN\Desktop\NET\practice-c-web net-01\practice-c-web net-01\bin\practice-c-web net-01.dll.config
+C:\Users\SEVEN\Desktop\NET\practice-c-web net-01\practice-c-web net-01\bin\practice-c-web net-01.dll
+C:\Users\SEVEN\Desktop\NET\practice-c-web net-01\practice-c-web net-01\bin\practice-c-web net-01.pdb
+C:\Users\SEVEN\Desktop\NET\practice-c-web net-01\practice-c-web net-01\bin\Antlr3.Runtime.dll
+C:\Users\SEVEN\Desktop\NET\practice-c-web net-01\practice-c-web net-01\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\SEVEN\Desktop\NET\practice-c-web net-01\practice-c-web net-01\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\SEVEN\Desktop\NET\practice-c-web net-01\practice-c-web net-01\bin\Newtonsoft.Json.dll
+C:\Users\SEVEN\Desktop\NET\practice-c-web net-01\practice-c-web net-01\bin\System.Web.Helpers.dll
+C:\Users\SEVEN\Desktop\NET\practice-c-web net-01\practice-c-web net-01\bin\System.Web.Mvc.dll
+C:\Users\SEVEN\Desktop\NET\practice-c-web net-01\practice-c-web net-01\bin\System.Web.Optimization.dll
+C:\Users\SEVEN\Desktop\NET\practice-c-web net-01\practice-c-web net-01\bin\System.Web.Razor.dll
+C:\Users\SEVEN\Desktop\NET\practice-c-web net-01\practice-c-web net-01\bin\System.Web.WebPages.Deployment.dll
+C:\Users\SEVEN\Desktop\NET\practice-c-web net-01\practice-c-web net-01\bin\System.Web.WebPages.dll
+C:\Users\SEVEN\Desktop\NET\practice-c-web net-01\practice-c-web net-01\bin\System.Web.WebPages.Razor.dll
+C:\Users\SEVEN\Desktop\NET\practice-c-web net-01\practice-c-web net-01\bin\WebGrease.dll
+C:\Users\SEVEN\Desktop\NET\practice-c-web net-01\practice-c-web net-01\bin\Antlr3.Runtime.pdb
+C:\Users\SEVEN\Desktop\NET\practice-c-web net-01\practice-c-web net-01\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\SEVEN\Desktop\NET\practice-c-web net-01\practice-c-web net-01\bin\Newtonsoft.Json.xml
+C:\Users\SEVEN\Desktop\NET\practice-c-web net-01\practice-c-web net-01\bin\System.Web.Helpers.xml
+C:\Users\SEVEN\Desktop\NET\practice-c-web net-01\practice-c-web net-01\bin\System.Web.Mvc.xml
+C:\Users\SEVEN\Desktop\NET\practice-c-web net-01\practice-c-web net-01\bin\System.Web.Optimization.xml
+C:\Users\SEVEN\Desktop\NET\practice-c-web net-01\practice-c-web net-01\bin\System.Web.Razor.xml
+C:\Users\SEVEN\Desktop\NET\practice-c-web net-01\practice-c-web net-01\bin\System.Web.WebPages.xml
+C:\Users\SEVEN\Desktop\NET\practice-c-web net-01\practice-c-web net-01\bin\System.Web.WebPages.Deployment.xml
+C:\Users\SEVEN\Desktop\NET\practice-c-web net-01\practice-c-web net-01\bin\System.Web.WebPages.Razor.xml
+C:\Users\SEVEN\Desktop\NET\practice-c-web net-01\practice-c-web net-01\obj\Debug\practice-c-web net-01.csprojResolveAssemblyReference.cache
+C:\Users\SEVEN\Desktop\NET\practice-c-web net-01\practice-c-web net-01\obj\Debug\practice-c-web net-01.csproj.CoreCompileInputs.cache
+C:\Users\SEVEN\Desktop\NET\practice-c-web net-01\practice-c-web net-01\obj\Debug\practice-c-web net-01.dll
+C:\Users\SEVEN\Desktop\NET\practice-c-web net-01\practice-c-web net-01\obj\Debug\practice-c-web net-01.pdb
